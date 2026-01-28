@@ -91,5 +91,34 @@ public class Ejercicio23CopiaArchivo {
             System.out.println("Ocurrió un error al leer el archivo: " +
                     e.getMessage());
         }
+
+        /* --------CORRECCIÓN EN CLASE CON UNA COLECCIÓN----------
+        Scanner sc = new Scanner(System.in);
+        List<String> texto = new ArrayList<>;
+
+        System.out.println("¿Qué archivo quiere copiar?");
+        String archivo = sc.nextLine();
+        try (BufferedReader reader = new BufferedReader(new FileReader("../"+archivo))) {
+            String linea;
+            while ((linea = reader.readLine()) != null) {
+                texto.add(linea);
+            }
+        } catch (IOException e) {
+            System.out.println("Ocurrió un error al leer el archivo: " +
+                    e.getMessage());
+        }
+        System.out.println("¿Qué nombre quiere dar al nuevo archivo?");
+        String nuevoArchivo = sc.nextLine();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("../"+nuevoArchivo))) {
+                    for( String line : texto) {
+                        writer.writer(line);
+                        writer.newLine();
+                    }
+                } catch (IOException e) {
+                    System.out.println("Ocurrió un error al escribir en el archivo: " +
+                            e.getMessage());
+                }
+
+         */
     }
 }
